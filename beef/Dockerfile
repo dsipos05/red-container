@@ -51,6 +51,6 @@ RUN sed -e '/get_permission$/s/^/#/' -i update-geoipdb
 RUN ./update-geoipdb
 
 EXPOSE 3000 4567 6789
-COPY entrypoint.sh /home/beef
+COPY beef/entrypoint.sh /home/beef
 USER beef
-ENTRYPOINT ["sh", "/home/beef/entrypoint.sh"]
+ENTRYPOINT ["/home/beef/entrypoint.sh"]
