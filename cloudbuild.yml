@@ -1,11 +1,11 @@
 ---
 steps:
-        #- name: 'gcr.io/cloud-builders/docker'
-        #  args:
-        #  - 'build'
-        #  - '--tag=gcr.io/${PROJECT_ID}/docker:latest'
-        #  - '--file=Dockerfile-cloudbuild'
-        #  - '.'
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+     - 'build'
+     - '--tag=gcr.io/${PROJECT_ID}/docker:latest'
+     - '--file=Dockerfile-cloudbuild'
+     - '.'
         #- name: 'gcr.io/${PROJECT_ID}/docker'
         #  args:
         #    - 'build'
@@ -25,7 +25,7 @@ steps:
     - '--file=beef/Dockerfile'
     - '.'
 images:
-        #- 'gcr.io/${PROJECT_ID}/docker:latest'
+- 'gcr.io/${PROJECT_ID}/docker:latest'
         #- 'gcr.io/${PROJECT_ID}/gobuster:latest'
         #- 'gcr.io/${PROJECT_ID}/tshark:latest'
 - 'gcr.io/${PROJECT_ID}/beef:latest'
